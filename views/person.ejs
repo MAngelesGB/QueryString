@@ -22,9 +22,9 @@
         case 'Adios':
             repetirMensaje();
         break;
-        default:
-            mensajeError(); 
-        break;
+        default: %>
+            <p>Mensaje invalido</p>
+        <% break;
     }%>
     
     <% function repetirMensaje()
@@ -37,11 +37,7 @@
         <% } %>
         </ul>
     <% } %>
-
-    <% function mensajeError()
-    { %>
-        <p>Mensaje no valido</p>
-    <%}%>
+    
     
     
 </body>

@@ -33,9 +33,10 @@ app.get('/person/:id', function(req, res) {
 
 });
 
+//Se agrega una cuarta ruta, en la que se reciben dos parametros más ademas de ID
 app.get('/endpoint/person/:id',function(req,res){
+    //Se renderiza la vista y los parametros recibidos
     res.render('person',{ID: req.params.id, Message: req.query.message, Times:req.query.times });
-
 });
 
 
