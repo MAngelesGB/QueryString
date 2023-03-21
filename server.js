@@ -34,9 +34,12 @@ app.get('/person/:id', function(req, res) {
 });
 
 //Se agrega una cuarta ruta, en la que se reciben dos parametros más ademas de ID
-app.get('/endpoint/person/:id',function(req,res){
+app.get('/endpoint/person2/:id',function(req,res){
     //Se renderiza la vista y los parametros recibidos
-    res.render('person',{ID: req.params.id, Message: req.query.message, Times:req.query.times });
+    /*Para este punto se creo un nuevo archi de person, de modo que se pudiera conservar el anterior
+    de modo que se cambio el nombre de person a person2*/
+
+    res.render('person2',{ID: req.params.id, Message: req.query.message, Times:req.query.times });
 });
 
 

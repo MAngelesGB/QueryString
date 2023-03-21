@@ -9,35 +9,7 @@
 </head>
 <body>
     <h1>Person: <%= ID %></h1>
-    <h2> Mensaje: <%= Message %></h2>
-
-
-    <% switch (Message) {
-        case 'Bienvenido':
-            repetirMensaje();
-        break;
-        case 'Hola':
-            repetirMensaje();
-        break;
-        case 'Adios':
-            repetirMensaje();
-        break;
-        default: %>
-            <p>Mensaje invalido</p>
-        <% break;
-    }%>
-    
-    <% function repetirMensaje()
-    { %>
-        <ul>
-            <% for(let i = 1; i<= Times ; i++) { %>
-            
-                <li><%=Message%> <%= ID %></li>
-            
-        <% } %>
-        </ul>
-    <% } %>
-    
+    <h2> Query string value:  <%= Qstr %></h2>
     
     
 </body>
