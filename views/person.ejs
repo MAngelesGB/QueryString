@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=/assets/style.css type=text/css rel=stylesheet /></head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Person: <%= ID %></h1>
+    <h2> Mensaje: <%= Message %></h2>
+
+
+    <% switch (Message) {
+        case 'Bienvenido':
+            repetirMensaje();
+        break;
+        case 'Hola':
+            repetirMensaje();
+        break;
+        case 'Adios':
+            repetirMensaje();
+        break;
+        default:
+            mensajeError(); 
+        break;
+    }%>
+    
+    <% function repetirMensaje()
+    { %>
+        <ul>
+            <% for(let i = 1; i<= Times ; i++) { %>
+            
+                <li><%=Message%> <%= ID %></li>
+            
+        <% } %>
+        </ul>
+    <% } %>
+
+    <% function mensajeError()
+    { %>
+        <p>Mensaje no valido</p>
+    <%}%>
+    
+    
+</body>
+</html>
